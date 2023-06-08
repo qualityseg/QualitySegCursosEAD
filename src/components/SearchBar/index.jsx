@@ -1,35 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react'; 
 import { Badge, Button, Container } from 'react-bootstrap';
 import cursosData from './cursos.json';
 import styles from './CursosEad.module.scss';
 import axios from 'axios';
-import { loadScript } from '@mercadopago/sdk-js';
+
 
 const Catalogo = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState(cursosData);
   const [selectedCourses, setSelectedCourses] = useState([]);
+  const [paymentData, setPaymentData] = useState({
+    title: '',
+    price: '',
+    quantity: 1,
+  });
 
-  const loadMercadoPagoScript = () => {
-    return new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = 'https://sdk.mercadopago.com/js/v2';
-      script.async = true;
-      script.onload = resolve;
-      script.onerror = reject;
-      document.body.appendChild(script);
-    });
-  };
-  
-  const initializeMercadoPago = async () => {
-    try {
-      await loadMercadoPagoScript();
-      window.MercadoPago.setPublishableKey('TEST-2684905602430236-052513-51d07b1caa42a7938ab7e2a9f13a7f98-135153905');
-    } catch (error) {
-      console.error('Erro ao carregar o script do Mercado Pago:', error);
+  useEffect(() => {
+    if (paymentData.title) {
+      handleSubmit();
     }
-  };
-  
+  }, [paymentData]);
 
   const handleSearch = (e) => {
     const searchTerm = e.target.value;
@@ -44,6 +34,7 @@ const Catalogo = () => {
       setSearchResults(cursosData);
     }
   };
+
   const handleCourseSelection = (e, curso) => {
     const isSelected = selectedCourses.some((c) => c.id === curso.id);
 
@@ -54,11 +45,15 @@ const Catalogo = () => {
     } else {
       setSelectedCourses((prevSelectedCourses) => [
         ...prevSelectedCourses,
-        { id: curso.id, quantidade: 1 },
+        {
+          id: curso.id,
+          quantidade: 1,
+          titulo: curso.titulo,
+          valor: curso.valor,
+        },
       ]);
     }
 
-    // Adicionar classe CSS ao elemento 'treatmentsItem'
     e.currentTarget.parentNode.classList.toggle(styles.selected);
     const floatingButton = document.querySelector('.floatingButton');
     if (floatingButton) {
@@ -75,44 +70,34 @@ const Catalogo = () => {
     );
   };
 
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post('http://localhost:5000/create_preference', paymentData);
+
+      const data = response.data;
+      window.location.href = `https://www.mercadopago.com.br/checkout/v1/redirect?preference-id=${data.id}`;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
+
   const handleCheckout = async () => {
     const items = selectedCourses.map((curso) => ({
       title: curso.titulo,
       unit_price: parseFloat(curso.valor),
       quantity: curso.quantidade,
     }));
-
-    const preference = {
-      items,
-    };
-
-    try {
-      const response = await axios.post('/api/criar-preferencia', preference);
-      const { init_point } = response.data;
-
-      // Criar uma instância do MercadoPagoCheckout
-      const checkout = new window.MercadoPagoCheckout({
-        preference: {
-          id: init_point,
-        },
+  
+    setPaymentData({
+      title: 'Cursos selecionados',
+      price: items.reduce((total, item) => total + item.unit_price * item.quantity, 0),
+      quantity: items.length,
     });
-
-         // Abrir o checkout
-      checkout.render({
-        container: '#checkout-container',
-        label: 'Pagar',
-      });
-    } catch (error) {
-      console.error('Erro ao criar preferência de checkout:', error);
-    }
   };
-  
-  
 
   return (
     <Container>
-      
-
       <div className={styles.searchContainer}>
         <div className={styles['search-bar']}>
           <input
@@ -131,7 +116,6 @@ const Catalogo = () => {
           return (
             <div
               className={`${styles.treatmentsItem} ${isSelected ? styles.selected : ''}`}
-              
               key={curso.id}
             >
               <div className={styles.images}>
@@ -139,7 +123,7 @@ const Catalogo = () => {
                   src={curso.imageSrc}
                   alt={curso.titulo}
                   className={styles.image}
-                  width={240}
+                  width={235}
                   height={127}
                 />
               </div>
@@ -164,9 +148,7 @@ const Catalogo = () => {
                 style={{ backgroundColor: '#01A982' }}
                 onClick={(e) => handleCourseSelection(e, curso)}
               >
-                {isSelected ? 'Remover curso' : (
-                  <span className="select-course-text">Selecione o curso</span>
-                )}
+                {isSelected ? 'Remover curso' : <span className="select-course-text">Selecione o curso</span>}
               </Button>
 
               {isSelected && (
@@ -196,7 +178,8 @@ const Catalogo = () => {
         </Badge>
       </Button>
 
-      <div id="checkout-container"></div>
+      
+
     </Container>
   );
 };

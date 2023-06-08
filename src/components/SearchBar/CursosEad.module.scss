@@ -129,10 +129,29 @@
   width: 100%;
   justify-content: center; /* Adicione esta linha */
 
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr); /* Alteração para tornar responsivo */
+  }
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(3, 1fr); /* Alteração para tornar responsivo */
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr); /* Alteração para tornar responsivo */
+  }
+
+
+// Adicione a classe .treatmentsItemContainer
+.treatmentsItemContainer {
+  width: 100%;
+}
+
+
 
   .treatmentsItem {
     background-color: none;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.15);
     padding: var(--s16);
     display: flex;
     flex-direction: column;
@@ -140,10 +159,12 @@
     position: relative;
     padding-bottom: 10px;
     transition: transform 0.3s ease;
-    width: 240px; /* Adicione essa linha para definir a largura */
+    /* Adicione essa linha para definir a largura */
     height: 450px; /* Ajuste a altura conforme necessário */
     border-radius: 15px;
- 
+    
+  
+    
   h3 {
     margin-top: 15px;
     margin-bottom: 32px;

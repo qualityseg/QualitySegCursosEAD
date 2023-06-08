@@ -1,7 +1,7 @@
 [
     {
         "imageSrc": "https://imgur.com/G1j7xWR.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "5S - Ferramentas da Qualidade - Cont\u00ednuo",
         "carga_horaria": "2h",
         "id": 1,
@@ -9,7 +9,7 @@
     },
     {
         "imageSrc": "https://imgur.com/bU6rYVh.png",
-        "valor": "R$ 119,90",
+        "valor": 119.90,
         "titulo": "An\u00e1lise de Riscos",
         "carga_horaria": "12h",
         "id": 2,
@@ -17,7 +17,7 @@
     },
     {
         "imageSrc": "https://imgur.com/n7KEBqF.png",
-        "valor": "R$ 129,90",
+        "valor": 129.90,
         "titulo": "Atendimento Pr\u00e9 Hospitalar (Primeiros Socorros) B\u00e1sico",
         "carga_horaria": "9h",
         "id": 3,
@@ -25,7 +25,7 @@
     },
     {
         "imageSrc": "https://imgur.com/mmOKX3U.png",
-        "valor": "R$ 189,90",
+        "valor": 189.90,
         "titulo": "Atendimento Pr\u00e9 Hospitalar (Primeiros Socorros) Intermedi\u00e1rio",
         "carga_horaria": "18h",
         "id": 4,
@@ -33,7 +33,7 @@
     },
     {
         "imageSrc": "https://imgur.com/vLPvY16.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "Avalia\u00e7\u00e3o Geral de Cena",
         "carga_horaria": "1h",
         "id": 5,
@@ -41,7 +41,7 @@
     },
     {
         "imageSrc": "https://imgur.com/a7ngF0v.png",
-        "valor": "R$ 159,90",
+        "valor": 159.90,
         "titulo": "Dire\u00e7\u00e3o Defensiva para Motoristas de Caminh\u00e3o",
         "carga_horaria": "4h",
         "id": 6,
@@ -49,7 +49,7 @@
     },
     {
         "imageSrc": "https://imgur.com/aclFUNx.png",
-        "valor": "R$ 159,90",
+        "valor": 159.90,
         "titulo": "Dire\u00e7\u00e3o Preventiva para Frotistas",
         "carga_horaria": "4h",
         "id": 7,
@@ -57,7 +57,7 @@
     },
     {
         "imageSrc": "https://imgur.com/gmNDbxO.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "Lei Geral de Prote\u00e7\u00e3o de Dados - LGPD",
         "carga_horaria": "2h",
         "id": 8,
@@ -65,7 +65,7 @@
     },
     {
         "imageSrc": "https://imgur.com/Bx9Ch1Z.png",
-        "valor": "R$ 129,90",
+        "valor": 129.90,
         "titulo": "LOTO - Guia Pr\u00e1tico",
         "carga_horaria": "10h",
         "id": 9,
@@ -73,7 +73,7 @@
     },
     {
         "imageSrc": "https://imgur.com/py1Zdom.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "No\u00e7\u00f5es B\u00e1sicas de Anatomia",
         "carga_horaria": "1h",
         "id": 10,
@@ -81,7 +81,7 @@
     },
     {
         "imageSrc": "https://imgur.com/itOBg0m.png",
-        "valor": "109,90",
+        "valor": 109.90,
         "titulo": "NR1 - Disposi\u00e7\u00f5es Gerais",
         "carga_horaria": "1h",
         "id": 11,
@@ -89,7 +89,7 @@
     },
     {
         "imageSrc": "https://imgur.com/hmnqDbl.png",
-        "valor": "189,90",
+        "valor": 189.90,
         "titulo": "NR10 - Seguran\u00e7a El\u00e9trica (Reciclagem)",
         "carga_horaria": "20h",
         "id": 12,
@@ -97,7 +97,7 @@
     },
     {
         "imageSrc": "https://imgur.com/iG7OwF7.png",
-        "valor": "R$ 199,90",
+        "valor": 199.90,
         "titulo": "NR10 - SEP (Sistema El\u00e9trico de Pot\u00eancia)",
         "carga_horaria": "20h",
         "id": 13,
@@ -105,7 +105,7 @@
     },
     {
         "imageSrc": "https://imgur.com/3qHbe0Q.png",
-        "valor": "R$ 219,90",
+        "valor": 219.90,
         "titulo": "NR10 - SEP - Reciclagem (Sistema El\u00e9trico de Pot\u00eancia)",
         "carga_horaria": "40h",
         "id": 14,
@@ -113,7 +113,7 @@
     },
     {
         "imageSrc": "https://imgur.com/DroH9wM.png",
-        "valor": "R$ 119,90",
+        "valor": 119.90,
         "titulo": "NR11 - Transporte Movimenta\u00e7\u00e3o Armazenagem e Manuseio de Materiais",
         "carga_horaria": "8h",
         "id": 15,
@@ -121,7 +121,7 @@
     },
     {
         "imageSrc": "https://imgur.com/s10vbQ3.png",
-        "valor": "109,90",
+        "valor": 109.90,
         "titulo": "NR11 - Transporte Movimenta\u00e7\u00e3o Armazenagem e Manuseio de Materiais (Reciclagem)",
         "carga_horaria": "4h",
         "id": 16,
@@ -129,7 +129,7 @@
     },
     {
         "imageSrc": "https://imgur.com/J0wCEt5.png",
-        "valor": "R$ 119,90",
+        "valor": 119.90,
         "titulo": "NR12 - Seguran\u00e7a no Trabalho em M\u00e1quinas e Equipamentos (Geral)",
         "carga_horaria": "8h",
         "id": 17,
@@ -137,7 +137,7 @@
     },
     {
         "imageSrc": "https://imgur.com/C7v61hH.png",
-        "valor": "109,90",
+        "valor": 109.90,
         "titulo": "NR12 - Seguran\u00e7a no Trabalho em M\u00e1quinas e Equipamentos (Geral) (Reciclagem)",
         "carga_horaria": "8h",
         "id": 18,
@@ -145,7 +145,7 @@
     },
     {
         "imageSrc": "https://imgur.com/ry6KCxI.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "NR17 - Ergonomia",
         "carga_horaria": "2h",
         "id": 19,
@@ -153,7 +153,7 @@
     },
     {
         "imageSrc": "https://imgur.com/Q2arj4c.png",
-        "valor": "109,90",
+        "valor": 109.90,
         "titulo": "NR17 - Ergonomia para Operadores de Checkout",
         "carga_horaria": "2h",
         "id": 20,
@@ -161,7 +161,7 @@
     },
     {
         "imageSrc": "https://imgur.com/oLblF6q.png",
-        "valor": "R$ 129,90",
+        "valor": 129.90,
         "titulo": "NR18 - Seguran\u00e7a e Sa\u00fade No Trabalho Na Ind\u00fastria Da Constru\u00e7\u00e3o (B\u00e1sico em Seguran\u00e7a do Trabalho)",
         "carga_horaria": "4h",
         "id": 21,
@@ -169,7 +169,7 @@
     },
     {
         "imageSrc": "https://imgur.com/Vou341A.png",
-        "valor": "239,90",
+        "valor": 239.90,
         "titulo": "NR20 Avan\u00e7ado I",
         "carga_horaria": "20h",
         "id": 22,
@@ -177,7 +177,7 @@
     },
     {
         "imageSrc": "https://imgur.com/bYdgvKl.png",
-        "valor": "R$ 169,90",
+        "valor": 169.90,
         "titulo": "NR20 Avan\u00e7ado I (Reciclagem)",
         "carga_horaria": "4h",
         "id": 23,
@@ -185,7 +185,7 @@
     },
     {
         "imageSrc": "https://imgur.com/YokreAV.png",
-        "valor": "R$ 249,90",
+        "valor": 249.90,
         "titulo": "NR20 Avan\u00e7ado II",
         "carga_horaria": "32h",
         "id": 24,
@@ -193,7 +193,7 @@
     },
     {
         "imageSrc": "https://imgur.com/rwjdaMt.png",
-        "valor": "R$ 179,90",
+        "valor": 179.90,
         "titulo": "NR20 Avan\u00e7ado II (Reciclagem)",
         "carga_horaria": "4h",
         "id": 25,
@@ -201,7 +201,7 @@
     },
     {
         "imageSrc": "https://imgur.com/k6YDrb0.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "NR20 B\u00e1sico (Reciclagem)",
         "carga_horaria": "4h",
         "id": 26,
@@ -209,7 +209,7 @@
     },
     {
         "imageSrc": "https://imgur.com/fMzwKCn.png",
-        "valor": "R$ 129,90",
+        "valor": 129.90,
         "titulo": "NR20 B\u00e1sico Classe I",
         "carga_horaria": "4h",
         "id": 27,
@@ -217,7 +217,7 @@
     },
     {
         "imageSrc": "https://imgur.com/PXm6AcV.png",
-        "valor": "R$ 129,90",
+        "valor": 129.90,
         "titulo": "NR20 B\u00e1sico Classe II",
         "carga_horaria": "6h",
         "id": 28,
@@ -225,7 +225,7 @@
     },
     {
         "imageSrc": "https://imgur.com/xsymrIB.png",
-        "valor": "R$ 129,90",
+        "valor": 129.90,
         "titulo": "NR20 B\u00e1sico Classe III",
         "carga_horaria": "8h",
         "id": 29,
@@ -233,7 +233,7 @@
     },
     {
         "imageSrc": "https://imgur.com/4I1bFFh.png",
-        "valor": "R$ 149,90",
+        "valor": 149.90,
         "titulo": "NR20 Inflam\u00e1veis e Combust\u00edveis N\u00edvel Espec\u00edfico Classe II",
         "carga_horaria": "4h",
         "id": 30,
@@ -241,7 +241,7 @@
     },
     {
         "imageSrc": "https://imgur.com/LHACw6j.png",
-        "valor": "R$ 189,90",
+        "valor": 189.90,
         "titulo": "NR20 Inflam\u00e1veis e Combust\u00edveis N\u00edvel Espec\u00edfico Classe III",
         "carga_horaria": "16h",
         "id": 31,
@@ -249,7 +249,7 @@
     },
     {
         "imageSrc": "https://imgur.com/CjxahVE.png",
-        "valor": "R$ 129,90",
+        "valor": 129.90,
         "titulo": "NR20 Inicia\u00e7\u00e3o sobre Inflam\u00e1veis e Combust\u00edveis",
         "carga_horaria": "4h",
         "id": 32,
@@ -257,7 +257,7 @@
     },
     {
         "imageSrc": "https://imgur.com/YfsWpTk.png",
-        "valor": "R$ 149,90",
+        "valor": 149.90,
         "titulo": "NR20 Intermedi\u00e1rio (Reciclagem)",
         "carga_horaria": "4h",
         "id": 33,
@@ -265,7 +265,7 @@
     },
     {
         "imageSrc": "https://imgur.com/5sv49OZ.png",
-        "valor": "R$ 219,90",
+        "valor": 219.90,
         "titulo": "NR20 Intermedi\u00e1rio Classe I",
         "carga_horaria": "12h",
         "id": 34,
@@ -273,7 +273,7 @@
     },
     {
         "imageSrc": "https://imgur.com/ceroCp3.png",
-        "valor": "R$ 219,90",
+        "valor": 219.90,
         "titulo": "NR20 Intermedi\u00e1rio Classe II",
         "carga_horaria": "14h",
         "id": 35,
@@ -281,7 +281,7 @@
     },
     {
         "imageSrc": "https://imgur.com/bHndait.png",
-        "valor": "R$ 219,90",
+        "valor": 219.90,
         "titulo": "NR20 Intermedi\u00e1rio Classe III",
         "carga_horaria": "16h",
         "id": 36,
@@ -289,7 +289,7 @@
     },
     {
         "imageSrc": "https://imgur.com/yfcE495.png",
-        "valor": "R$ 189,90",
+        "valor": 189.90,
         "titulo": "NR22 - CIPAMIN - Comiss\u00e3o Interna de Preven\u00e7\u00e3o de Acidentes de Trabalho na Minera\u00e7\u00e3o",
         "carga_horaria": "24h",
         "id": 37,
@@ -297,7 +297,7 @@
     },
     {
         "imageSrc": "https://imgur.com/Mt4ZYdr.png",
-        "valor": "R$ 129,90",
+        "valor": 129.90,
         "titulo": "NR26 - Sinaliza\u00e7\u00e3o de Seguran\u00e7a",
         "carga_horaria": "4h",
         "id": 38,
@@ -305,7 +305,7 @@
     },
     {
         "imageSrc": "https://imgur.com/hR98QXY.png",
-        "valor": "R$ 129,90",
+        "valor": 129.90,
         "titulo": "NR32 - Seguran\u00e7a e Sa\u00fade no Trabalho em Servi\u00e7os de Sa\u00fade",
         "carga_horaria": "8h",
         "id": 39,
@@ -313,7 +313,7 @@
     },
     {
         "imageSrc": "https://imgur.com/OaTOjhk.png",
-        "valor": "R$ 169,90",
+        "valor": 169.90,
         "titulo": "NR31 - CIPA Trabalho Rural",
         "carga_horaria": "20h",
         "id": 40,
@@ -321,7 +321,7 @@
     },
     {
         "imageSrc": "https://imgur.com/HMYmJ9y.png",
-        "valor": "R$ 229,90",
+        "valor": 229.90,
         "titulo": "NR33 Supervisor",
         "carga_horaria": "40h",
         "id": 41,
@@ -329,7 +329,7 @@
     },
     {
         "imageSrc": "https://imgur.com/Qaqp2WS.png",
-        "valor": "R$ 159,90",
+        "valor": 159.90,
         "titulo": "NR33 Supervisor (Reciclagem)",
         "carga_horaria": "8h",
         "id": 42,
@@ -337,7 +337,7 @@
     },
     {
         "imageSrc": "https://imgur.com/yLFYXV0.png",
-        "valor": "R$ 189,90",
+        "valor": 189.90,
         "titulo": "NR33 Trabalhador e Vigia",
         "carga_horaria": "16h",
         "id": 43,
@@ -345,7 +345,7 @@
     },
     {
         "imageSrc": "https://imgur.com/T1qE9UM.png",
-        "valor": "R$ 119,90",
+        "valor": 119.90,
         "titulo": "NR33 Trabalhador e Vigia (Reciclagem)",
         "carga_horaria": "8h",
         "id": 44,
@@ -353,7 +353,7 @@
     },
     {
         "imageSrc": "https://imgur.com/XEhyW2a.png",
-        "valor": "R$ 169,90",
+        "valor": 169.90,
         "titulo": "NR34 - Trabalho a Quente",
         "carga_horaria": "8h",
         "id": 45,
@@ -361,7 +361,7 @@
     },
     {
         "imageSrc": "https://imgur.com/2P6WIrW.png",
-        "valor": "R$ 189,90",
+        "valor": 189.90,
         "titulo": "NR35 - Trabalho em Altura",
         "carga_horaria": "24h",
         "id": 46,
@@ -369,7 +369,7 @@
     },
     {
         "imageSrc": "https://imgur.com/Cqk8ucf.png",
-        "valor": "R$ 119,90",
+        "valor": 119.90,
         "titulo": "NR35 - Trabalho em Altura - Trabalhador (Reciclagem)",
         "carga_horaria": "8h",
         "id": 47,
@@ -377,7 +377,7 @@
     },
     {
         "imageSrc": "https://imgur.com/gvFLAyr.png",
-        "valor": "R$ 139,90",
+        "valor": 139.90,
         "titulo": "NR5 - CIPA - GRAU DE RISCO 1",
         "carga_horaria": "8h",
         "id": 48,
@@ -385,7 +385,7 @@
     },
     {
         "imageSrc": "https://imgur.com/gvFLAyr.png",
-        "valor": "R$ 139,90",
+        "valor": 139.90,
         "titulo": "NR5 - CIPA - GRAU DE RISCO 1 - Representante Nomeado - EAD",
         "carga_horaria": "8h",
         "id": 49,
@@ -393,7 +393,7 @@
     },
     {
         "imageSrc": "https://imgur.com/vT7o7Zt.png",
-        "valor": "R$ 149,90",
+        "valor": 149.90,
         "titulo": "NR5 - CIPA - GRAU DE RISCO 2",
         "carga_horaria": "12h",
         "id": 50,
@@ -401,7 +401,7 @@
     },
     {
         "imageSrc": "https://imgur.com/vT7o7Zt.png",
-        "valor": "R$ 149,90",
+        "valor": 149.90,
         "titulo": "NR5 - CIPA - GRAU DE RISCO 2 - Representante Nomeado - EAD",
         "carga_horaria": "12h",
         "id": 51,
@@ -409,7 +409,7 @@
     },
     {
         "imageSrc": "https://imgur.com/vT7o7Zt.png",
-        "valor": "R$ 159,90",
+        "valor": 159.90,
         "titulo": "NR5 - CIPA - GRAU DE RISCO 3",
         "carga_horaria": "16h",
         "id": 52,
@@ -417,7 +417,7 @@
     },
     {
         "imageSrc": "https://imgur.com/vT7o7Zt.png",
-        "valor": "R$ 159,90",
+        "valor": 159.90,
         "titulo": "NR5 - CIPA - GRAU DE RISCO 3 - Representante Nomeado - EAD",
         "carga_horaria": "16h",
         "id": 53,
@@ -425,7 +425,7 @@
     },
     {
         "imageSrc": "https://imgur.com/vT7o7Zt.png",
-        "valor": "R$ 169,90",
+        "valor": 169.90,
         "titulo": "NR5 - CIPA - GRAU DE RISCO 4",
         "carga_horaria": "20h",
         "id": 54,
@@ -433,7 +433,7 @@
     },
     {
         "imageSrc": "https://imgur.com/vT7o7Zt.png",
-        "valor": "R$ 169,90",
+        "valor": 169.90,
         "titulo": "NR5 - CIPA - GRAU DE RISCO 4 - Representante Nomeado - EAD",
         "carga_horaria": "20h",
         "id": 55,
@@ -441,7 +441,7 @@
     },
     {
         "imageSrc": "https://imgur.com/K4MoHuO.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "NR6 - EPIs e EPCs (Equipamentos de Prote\u00e7\u00e3o Individual e Coletiva)",
         "carga_horaria": "2h",
         "id": 56,
@@ -449,7 +449,7 @@
     },
     {
         "imageSrc": "https://imgur.com/LFPQDxB.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "PPR - Programa de Prote\u00e7\u00e3o Respirat\u00f3ria",
         "carga_horaria": "2h",
         "id": 57,
@@ -457,7 +457,7 @@
     },
     {
         "imageSrc": "https://imgur.com/UcVqtg5.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "Preven\u00e7\u00e3o e Combate \u00e0 COVID-19",
         "carga_horaria": "2h",
         "id": 58,
@@ -465,7 +465,7 @@
     },
     {
         "imageSrc": "https://imgur.com/eRM2ZRg.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "Preven\u00e7\u00e3o e Prote\u00e7\u00e3o Contra Inc\u00eandios",
         "carga_horaria": "6h",
         "id": 59,
@@ -473,7 +473,7 @@
     },
     {
         "imageSrc": "https://imgur.com/TDv4EwO.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "Ressuscita\u00e7\u00e3o Cardiopulmonar - (RCP)",
         "carga_horaria": "3h",
         "id": 60,
@@ -481,7 +481,7 @@
     },
     {
         "imageSrc": "https://imgur.com/SUfhlmc.png",
-        "valor": "R$ 109,90",
+        "valor": 109.90,
         "titulo": "Treinamento de Valas e Escava\u00e7\u00f5es",
         "carga_horaria": "2h",
         "id": 61,
@@ -489,7 +489,7 @@
     },
     {
         "imageSrc": "https://imgur.com/954kMp1.png",
-        "valor": "R$ 189,90",
+        "valor": 189.90,
         "titulo": "NR33 Trabalhador e Vigia",
         "carga_horaria": "16h",
         "id": 62,
