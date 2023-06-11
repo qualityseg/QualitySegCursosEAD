@@ -5,6 +5,7 @@ import styles from './CursosEad.module.scss';
 import axios from 'axios';
 
 
+
 const Catalogo = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState(cursosData);
@@ -178,7 +179,7 @@ const Catalogo = () => {
         </Badge>
       </Button>
 
-      
+    
 
     </Container>
   );

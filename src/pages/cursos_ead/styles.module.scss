@@ -1,3 +1,38 @@
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.textContainer {
+  margin-right: 90px;
+}
+
+.imageContainer {
+  flex: 0 0 auto; // do not allow the image to shrink or grow
+}
+
+@media (max-width: 600px) {
+  .images {
+    flex-direction: column;
+  }
+  
+  .textContainer {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
+
 
 .treatments {
   margin: 50px auto;

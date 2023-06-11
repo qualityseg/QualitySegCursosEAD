@@ -29,32 +29,27 @@
   }
 
   img {
-    width: 35px;
-    height: 35px;
-    border-radius: 30%;
+    width: 50px;
+    height: 50px;
+   
   }
 
-  .badge {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: #FF0000;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: #fff;
-    transition: background-color 0.3s ease;
-  }
+  
 
-  &:hover .badge,
-  &:focus .badge {
-    background-color: #FF0000;
-  }
+
 }
+.customBadge {
+  position: absolute; /* Adicione esta linha */
+  top: 0; /* Adicione esta linha */
+  right: 0; /* Adicione esta linha */
+  font-size: 15px !important;
+  font-weight: bold !important;
+  color: white !important;
+  background-color: red !important;
+  border: 2px solid red !important;
+  border-radius: 5px;
+}
+
 .floatingButton.selected {
   border: 2px solid #01A982;
   box-shadow: 0 0 0 4px rgba(26, 111, 69, 0.3);
@@ -306,5 +301,13 @@
   .search-bar {
     width: 100px;
   }
+
 }
+@media screen and (max-width: 235px) {
+  .floatingButton {
+    width: 15px;
+    height: 15px;
+  }
+}
+
 }
