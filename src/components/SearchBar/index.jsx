@@ -73,7 +73,7 @@ const Catalogo = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/create_preference', paymentData);
+      const response = await axios.post('https://wild-cyan-elephant-suit.cyclic.app/create_preference', paymentData);
 
       const data = response.data;
       window.location.href = `https://www.mercadopago.com.br/checkout/v1/redirect?preference-id=${data.id}`;
