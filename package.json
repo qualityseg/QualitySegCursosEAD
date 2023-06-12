@@ -28,8 +28,6 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.0.0",
-    "react-notification-alert": "0.0.13",
-    "react-responsive-carousel": "^3.2.23",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "5.0.1",
