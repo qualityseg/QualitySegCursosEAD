@@ -9,6 +9,7 @@ import axios from 'axios';
 const Catalogo = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalURL, setModalURL] = useState('');
+
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState(cursosData);
   const [selectedCourses, setSelectedCourses] = useState([]);
@@ -97,15 +98,6 @@ const Catalogo = () => {
       price: items.reduce((total, item) => total + item.unit_price * item.quantity, 0),
       quantity: items.length,
     });
-    try {
-      const response = await axios.post('https://wild-cyan-elephant-suit.cyclic.app/create_preference', paymentData);
-      const data = response.data;
-      
-      setModalURL(`https://www.mercadopago.com.br/checkout/v1/redirect?preference-id=${data.id}`);
-      setIsModalOpen(true);
-    } catch (error) {
-      console.error(error);
-    }
   };
 
   return (
@@ -190,7 +182,7 @@ const Catalogo = () => {
         </Badge>
       </Button>
 
-      
+    
 
     </Container>
   );
