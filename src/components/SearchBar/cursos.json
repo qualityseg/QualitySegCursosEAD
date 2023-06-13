@@ -1,7 +1,7 @@
 [
     {
         "imageSrc": "https://imgur.com/G1j7xWR.png",
-        "valor": 1.00,
+        "valor": 0.90,
         "titulo": "5S - Ferramentas da Qualidade - Cont\u00ednuo",
         "carga_horaria": "2h",
         "id": 1,
@@ -9,7 +9,7 @@
     },
     {
         "imageSrc": "https://imgur.com/bU6rYVh.png",
-        "valor": 119.90,
+        "valor": 0.90,
         "titulo": "An\u00e1lise de Riscos",
         "carga_horaria": "12h",
         "id": 2,
@@ -17,7 +17,7 @@
     },
     {
         "imageSrc": "https://imgur.com/n7KEBqF.png",
-        "valor": 129.90,
+        "valor": 0.90,
         "titulo": "Atendimento Pr\u00e9 Hospitalar (Primeiros Socorros) B\u00e1sico",
         "carga_horaria": "9h",
         "id": 3,
