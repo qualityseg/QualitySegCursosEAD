@@ -7,9 +7,6 @@ import axios from 'axios';
 
 
 const Catalogo = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalURL, setModalURL] = useState('');
-
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState(cursosData);
   const [selectedCourses, setSelectedCourses] = useState([]);
