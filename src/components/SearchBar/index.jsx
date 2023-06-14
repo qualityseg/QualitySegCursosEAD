@@ -3,12 +3,16 @@ import { Badge, Button, Container } from 'react-bootstrap';
 import cursosData from './cursos.json';
 import styles from './CursosEad.module.scss';
 import axios from 'axios';
+import Modal from 'react-modal';
 
 
 
 const Catalogo = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState(cursosData);
+  const [modalShow, setModalShow] = useState(true);
+  const [email, setEmail] = useState("");
+
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [paymentData, setPaymentData] = useState({
     title: '',
@@ -21,6 +25,12 @@ const Catalogo = () => {
       handleSubmit();
     }
   }, [paymentData]);
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+    setPaymentData(prevData => ({ ...prevData, email: event.target.value }));
+  };
+  
 
   const handleSearch = (e) => {
     const searchTerm = e.target.value;
@@ -90,15 +100,62 @@ const Catalogo = () => {
       quantity: curso.quantidade,
     }));
   
-    setPaymentData({
+    setPaymentData(prevData => ({
+      ...prevData,
       title: 'Cursos selecionados',
       price: items.reduce((total, item) => total + item.unit_price * item.quantity, 0),
       quantity: items.length,
-    });
+    }));
   };
+  
 
   return (
     <Container>
+      Modal.setAppElement('#root');
+      <Modal
+        isOpen={modalShow}
+        onRequestClose={() => setModalShow(false)}
+        contentLabel="Email Modal"
+        style={{
+          content: {
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            transform: 'translate(-50%, -50%)',
+            width: '475px',
+            height: '130px',
+            fontSize: '12px',
+            backgroundColor: '#01A982',
+            boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          },
+          overlay: {
+            backgroundColor: 'rgba(0,0,0,0.5)',
+          }
+        }}
+      >
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <h2 style={{ marginBottom: '10px' }}>Informe seu e-mail para acessar os Cursos EAD:</h2>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <input type="email" value={email} onChange={handleEmailChange} style={{ width: '310px', height: '30px', marginRight: '10px' }} />
+            <Button variant="secondary" onClick={() => setModalShow(false)} style={{ width: '100px', height: '30px' }}>
+              Confirmar
+            </Button>
+          </div>
+        </div>
+      </Modal>
+
+      
+
+
+
+
+
       <div className={styles.searchContainer}>
         <div className={styles['search-bar']}>
           <input
