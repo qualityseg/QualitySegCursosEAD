@@ -84,15 +84,14 @@ const Catalogo = () => {
   const handleSubmit = async () => {
     try {
       const response = await axios.post('https://wild-cyan-elephant-suit.cyclic.app/create_preference', paymentData);
-
+  
       const data = response.data;
-      window.location.href = `https://www.mercadopago.com.br/checkout/v1/redirect?preference-id=${data.id}`;
+      window.open(`https://www.mercadopago.com.br/checkout/v1/redirect?preference-id=${data.id}`, '_blank');
     } catch (error) {
       console.error(error);
     }
   };
   
-
   const handleCheckout = async () => {
     const items = selectedCourses.map((curso) => ({
       title: curso.titulo,
@@ -105,9 +104,28 @@ const Catalogo = () => {
       title: 'Cursos selecionados',
       price: items.reduce((total, item) => total + item.unit_price * item.quantity, 0),
       quantity: items.length,
+      email: email, // adicione esta linha
+      payer: {
+        email // e aqui
+      },
+      additional_info: JSON.stringify({ courses: selectedCourses, email }), // Armazene os detalhes dos cursos selecionados e o e-mail do usuário aqui
     }));
   };
   
+  
+  
+  const handleConfirm = () => {
+    if (validateEmail(email)) {
+      setModalShow(false);
+    } else {
+      alert('Por favor, insira um e-mail válido.');
+    }
+  };
+  
+  const validateEmail = (email) => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
 
   return (
     <Container>
@@ -115,6 +133,7 @@ const Catalogo = () => {
       <Modal
         isOpen={modalShow}
         onRequestClose={() => setModalShow(false)}
+        shouldCloseOnOverlayClick={false} // Adicione esta linha
         contentLabel="Email Modal"
         style={{
           content: {
@@ -139,21 +158,16 @@ const Catalogo = () => {
           }
         }}
       >
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <h2 style={{ marginBottom: '10px' }}>Informe seu e-mail para acessar os Cursos EAD:</h2>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <input type="email" value={email} onChange={handleEmailChange} style={{ width: '310px', height: '30px', marginRight: '10px' }} />
-            <Button variant="secondary" onClick={() => setModalShow(false)} style={{ width: '100px', height: '30px' }}>
+            <Button variant="secondary" onClick={handleConfirm} style={{ width: '100px', height: '30px' }}>
               Confirmar
             </Button>
           </div>
         </div>
       </Modal>
-
-      
-
-
-
 
 
       <div className={styles.searchContainer}>

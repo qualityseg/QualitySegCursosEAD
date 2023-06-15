@@ -35,7 +35,8 @@
     "react-scripts": "5.0.1",
     "reactstrap": "8.8.1",
     "sass": "^1.63.3",
-    "styled-components": "^5.3.10"
+    "styled-components": "^5.3.10",
+    "twilio": "^4.11.2"
   },
   "devDependencies": {
     "eslint": "^8.42.0",
