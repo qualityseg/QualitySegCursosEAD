@@ -74,16 +74,23 @@ export const Header = () => {
             </a>
           </Link>
 
+          <Link href="https://qualitysegconsultoria.com.br/" legacyBehavior>
+              <a className={styles.menuItem}>Home</a>
+          </Link>
+          <Link href="cursos_ead" legacyBehavior>
+              <a className={styles.menuItem}>Catálogo de Cursos</a>
+          </Link>
+
           <button
-            className={
+              className={
               showMenu
-                ? `${styles.btnMenuMobile} ${styles.menuOpen}`
-                : styles.btnMenuMobile
-            }
-            onClick={() => setShowMenu(!showMenu)}
+                  ? `${styles.btnMenuMobile} ${styles.menuOpen}`
+                  : styles.btnMenuMobile
+              }
+              onClick={() => setShowMenu(!showMenu)}
           >
-            Menu
-            <span className={styles.iconHamburguer}></span>
+              Menu
+              <span className={styles.iconHamburguer}></span>
           </button>
 
           <div className={styles.btnAgendar}>
@@ -97,6 +104,8 @@ export const Header = () => {
             </Button>
           </div>
         </div>
+
+        
 
         <nav
           className={

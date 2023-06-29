@@ -1,3 +1,15 @@
+.menuItem {
+  padding: 1rem;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: #ddd;
+    transition: color 0.3s;
+  }
+}
+
 .blackBar {
   margin-top: -10px;
   margin-bottom: 10px;

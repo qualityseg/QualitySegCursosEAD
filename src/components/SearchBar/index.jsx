@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'; 
-import { Badge, Button, Container } from 'react-bootstrap';
+import { Badge, Button, Container, Table } from 'react-bootstrap';
 import cursosData from './cursos.json';
 import styles from './CursosEad.module.scss';
 import axios from 'axios';
+import ReactModal from 'react-modal'; // importando o ReactModal
 
 
 
@@ -10,6 +11,7 @@ const Catalogo = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState(cursosData);
   const [selectedCourses, setSelectedCourses] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
   const [paymentData, setPaymentData] = useState({
     title: '',
     price: '',
@@ -17,10 +19,21 @@ const Catalogo = () => {
   });
 
   useEffect(() => {
-    if (paymentData.title) {
-      handleSubmit();
+    if (typeof window !== 'undefined' && document.getElementById('root')) {
+        ReactModal.setAppElement('#root');
     }
-  }, [paymentData]);
+}, []);
+
+
+
+  const handleModalOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsOpen(false);
+  };
+
 
   const handleSearch = (e) => {
     const searchTerm = e.target.value;
@@ -73,14 +86,24 @@ const Catalogo = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('https://wild-cyan-elephant-suit.cyclic.app/create_preference', paymentData);
-
+      // Mapeie cada curso selecionado para um item
+      const items = selectedCourses.map((curso) => ({
+        title: curso.titulo,
+        unit_price: parseFloat(curso.valor),
+        quantity: curso.quantidade,
+      }));
+  
+      // Passe o array de itens para o servidor
+      const response = await axios.post('https://wild-cyan-elephant-suit.cyclic.app/create_preference', { items });
+  
       const data = response.data;
-      window.location.href = `https://www.mercadopago.com.br/checkout/v1/redirect?preference-id=${data.id}`;
+      window.open(`https://www.mercadopago.com.br/checkout/v1/redirect?preference-id=${data.id}`);
     } catch (error) {
       console.error(error);
     }
   };
+  
+  
   
 
   const handleCheckout = async () => {
@@ -90,12 +113,9 @@ const Catalogo = () => {
       quantity: curso.quantidade,
     }));
   
-    setPaymentData({
-      title: 'Cursos selecionados',
-      price: items.reduce((total, item) => total + item.unit_price * item.quantity, 0),
-      quantity: items.length,
-    });
+    setPaymentData(items);  // Agora paymentData é um array de itens
   };
+  
 
   return (
     <Container>
@@ -171,13 +191,44 @@ const Catalogo = () => {
             </div>
           );
         })}
+
       </div>
-      <Button className={`${styles.floatingButton} floatingButton`} onClick={handleCheckout}>
+      
+      <ReactModal isOpen={isOpen} onRequestClose={handleModalClose}>
+        <h2>Carrinho</h2>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Curso</th>
+              <th>Valor</th>
+              <th>Quantidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            {selectedCourses.map(curso => (
+              <tr key={curso.id}>
+                <td>{curso.titulo}</td>
+                <td>{curso.valor}</td>
+                <td>{curso.quantidade}</td>
+              </tr>
+            ))}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Total</td>
+              <td colSpan="2">{selectedCourses.reduce((total, curso) => total + curso.valor * curso.quantidade, 0)}</td>
+            </tr>
+          </tfoot>
+        </Table>
+        <button onClick={handleModalClose}>Fechar</button>
+      </ReactModal>
+      <Button className={`${styles.floatingButton} floatingButton`} onClick={handleSubmit}>
         <img src="https://i.imgur.com/NTdUTN0.png" alt="Icon" />
         <Badge pill variant="danger" className={`${styles.customBadge} Badge`}>
           {selectedCourses.reduce((total, curso) => total + curso.quantidade, 0)}
         </Badge>
       </Button>
+
 
     
 
