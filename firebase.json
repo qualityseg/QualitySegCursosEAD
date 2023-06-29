@@ -8,6 +8,12 @@
         ".git",
         "firebase-debug.log",
         "firebase-debug.*.log"
+<<<<<<< HEAD
+=======
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint:firebase"
+>>>>>>> 5ea458a8843c96a0035ce76287521ad579f5bbe7
       ]
     }
   ],
