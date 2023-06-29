@@ -18,10 +18,6 @@
     "bootstrap": "4.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.1.4",
-<<<<<<< HEAD
-=======
-    "eslint-config-next": "^13.4.4",
->>>>>>> 5ea458a8843c96a0035ce76287521ad579f5bbe7
     "express": "^4.18.2",
     "firebase": "^9.22.2",
     "gulp": "4.0.2",
@@ -39,12 +35,7 @@
     "react-scripts": "5.0.1",
     "reactstrap": "8.8.1",
     "sass": "^1.63.3",
-<<<<<<< HEAD
     "styled-components": "^5.3.10"
-=======
-    "styled-components": "^5.3.10",
-    "twilio": "^4.11.2"
->>>>>>> 5ea458a8843c96a0035ce76287521ad579f5bbe7
   },
   "devDependencies": {
     "eslint": "^8.42.0",
